@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+my_ocr_env/
+.venv/ # If you had named it .venv previously
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# Output files
+smart_ocr_output.txt
+smart_ocr_output_v2.txt
+output.txt # Any other similar output files
+
+# Debug images folder (if you create it)
+debug_imgs/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# If you decide NOT to use Git LFS for the model and want to exclude it completely
+# local_models/publaynet-tf_efficientdet_d0.pth.tar
