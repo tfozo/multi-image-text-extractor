@@ -11,6 +11,8 @@ my_ocr_env/
 .vscode/
 .idea/
 
+local_models/publaynet-tf_efficientdet_d0.pth.tar
+
 # Output files
 smart_ocr_output.txt
 smart_ocr_output_v2.txt
