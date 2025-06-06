@@ -20,13 +20,18 @@ if not os.path.exists(INPUT_DIR):
 # Initialize LayoutParser model
 try:
     # --- START OF MODIFICATIONS FOR MANUALLY DOWNLOADED MODEL ---
-    LOCAL_MODEL_WEIGHTS_FILENAME = "publaynet-tf_efficientdet_d0.pth.tar" # The exact name of your downloaded file
+    # --- START OF MODIFICATIONS FOR MANUALLY DOWNLOADED MODEL ---
+    LOCAL_MODEL_WEIGHTS_FILENAME = "publaynet-tf_efficientdet_d0.pth.tar"
     LOCAL_MODEL_WEIGHTS_PATH = os.path.join("local_models", LOCAL_MODEL_WEIGHTS_FILENAME)
 
+    # Check if the local model file exists
     if not os.path.exists(LOCAL_MODEL_WEIGHTS_PATH):
         print(f"ERROR: Local model weights file not found at: {LOCAL_MODEL_WEIGHTS_PATH}")
         print(f"Please download '{LOCAL_MODEL_WEIGHTS_FILENAME}' and place it in the 'local_models' directory.")
+        print("You can usually find this model via a web search for 'publaynet tf_efficientdet_d0 pth.tar download' or from LayoutParser's model zoo documentation.")
+        print("A common direct download link (may change over time) is: https://www.dropbox.com/s/ukbw5s673633hsw/publaynet-tf_efficientdet_d0.pth.tar?dl=1")
         exit()
+    # ... rest of the model loading ...
 
     model = lp.models.EfficientDetLayoutModel(
         config_path='lp://PubLayNet/tf_efficientdet_d0/config',
