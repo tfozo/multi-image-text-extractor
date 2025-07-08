@@ -85,3 +85,8 @@ Ensure your virtual environment (`my_ocr_env`) is activated. Then, from the proj
 
 ```bash
 python smart_ocr2.py
+```
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
